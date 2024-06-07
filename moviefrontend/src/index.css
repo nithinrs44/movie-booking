@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.Movie{
+  background-image: url('https://www.yourerie.com/wp-content/uploads/sites/27/2022/09/movie-theater-popcorn.jpg?w=2560&h=1440&crop=1');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+}
+/* Container */
+.booking-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #5fc4b5;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Form Label */
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Form Input and Select */
+.form-input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Fixes padding issue */
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Form Button */
+.form-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #0056b3;
+}
+
+/* Animation for button */
+.form-button:active {
+  transform: scale(0.98); /* Slightly shrink the button */
+}
+
+/* Disabled input styling */
+.form-input:disabled {
+  background-color: #e9ecef;
+}
+
+/* Show unique style for the total price input */
+.form-input[readonly] {
+  background-color: #f8f9fa;
+  color: #212529;
+  font-weight: bold;
+}
+
+/* Error or Availability Messages */
+.booking-container p {
+  color: #dc3545; /* Bootstrap danger color */
+  font-size: 0.9rem;
+}
+.add{
+  background-image: url(data:image/jpeg;base64,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);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+.list{
+  background-image: url(https://wallpapers.com/images/hd/movie-theater-background-2048-x-1536-9wlq655dcp63cdi8.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+} 
+
+
